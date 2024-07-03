@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+import 'package:getx_sample/config/themes/app_theme.dart';
 import 'package:getx_sample/controllers/store_controller.dart';
 import 'package:getx_sample/controllers/theme_controller.dart';
 import 'package:getx_sample/widgets/side_drawer.dart';
 
-import 'app_theme.dart';
-import 'constants/color_constants.dart';
+import 'config/themes/app_colors.dart';
+
 
 class Home extends GetView<StoreController> {
    Home({super.key});
@@ -16,17 +17,17 @@ class Home extends GetView<StoreController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.spaceCadet,
+      backgroundColor: AppColors.whiteColor,
       appBar: AppBar(
         title: const Text("GetX Store"),
         actions: [
           IconButton(
             onPressed: () {
               if (Get.isDarkMode) {
-                themeController.changeTheme(Themes.lightTheme);
+                themeController.changeTheme(AppTheme.lightTheme);
                 themeController.saveTheme(false);
               } else {
-                themeController.changeTheme(Themes.darkTheme);
+                themeController.changeTheme(AppTheme.darkTheme);
                 themeController.saveTheme(true);
               }
             },
@@ -42,7 +43,7 @@ class Home extends GetView<StoreController> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              MainCard
+              // MainCard
             ],
           ),
         ),

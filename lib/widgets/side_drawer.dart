@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:get/get.dart';
 
-import '../constants/color_constants.dart';
+import '../config/themes/app_colors.dart';
+
 
 class SideDrawer extends StatelessWidget {
   const SideDrawer({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class SideDrawer extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color:
-                Get.isDarkMode ? AppColors.spaceCadet : AppColors.spaceBlue,
+                Get.isDarkMode ? AppColors.primaryColorDark : AppColors.secondaryColorDark,
                 fontSize: 24,
               ),
             ),
@@ -27,15 +28,15 @@ class SideDrawer extends StatelessWidget {
               leading: Icon(
                 Icons.change_circle_sharp,
                 color:
-                Get.isDarkMode ? AppColors.spaceCadet : AppColors.spaceBlue,
+                Get.isDarkMode ? AppColors.primaryColorDark : AppColors.secondaryColorDark,
               ),
               title: Text(
                 "Change Store Name",
                 style: TextStyle(
                   fontSize: 18.0,
                   color: Get.isDarkMode
-                      ? AppColors.spaceCadet
-                      : AppColors.spaceBlue,
+                      ? AppColors.primaryColorDark
+                      : AppColors.secondaryColorDark,
                 ),
               ),
               onTap: () {
@@ -47,14 +48,14 @@ class SideDrawer extends StatelessWidget {
             leading: Icon(
               Icons.add_reaction_sharp,
               color:
-              Get.isDarkMode ? AppColors.spaceCadet : AppColors.spaceBlue,
+              Get.isDarkMode ? AppColors.primaryColorDark : AppColors.secondaryColorDark,
             ),
             title: Text(
               "Add Followers",
               style: TextStyle(
                 fontSize: 18.0,
                 color:
-                Get.isDarkMode ? AppColors.spaceCadet : AppColors.spaceBlue,
+                Get.isDarkMode ? AppColors.primaryColorDark : AppColors.secondaryColorDark,
               ),
             ),
             onTap: () => Get.offAndToNamed('/add_followers'),
@@ -63,14 +64,14 @@ class SideDrawer extends StatelessWidget {
             leading: Icon(
               Icons.add_task_sharp,
               color:
-              Get.isDarkMode ? AppColors.spaceCadet : AppColors.spaceBlue,
+              Get.isDarkMode ? AppColors.primaryColorDark : AppColors.secondaryColorDark,
             ),
             title: Text(
               "Increment Followers",
               style: TextStyle(
                 fontSize: 18.0,
                 color:
-                Get.isDarkMode ? AppColors.spaceCadet : AppColors.spaceBlue,
+                Get.isDarkMode ? AppColors.primaryColorDark : AppColors.secondaryColorDark,
               ),
             ),
             onTap: () => Get.offAndToNamed('/edit_follower_count'),
@@ -79,14 +80,14 @@ class SideDrawer extends StatelessWidget {
             leading: Icon(
               Icons.toggle_on_sharp,
               color:
-              Get.isDarkMode ? AppColors.spaceCadet : AppColors.spaceBlue,
+              Get.isDarkMode ? AppColors.primaryColorDark : AppColors.secondaryColorDark,
             ),
             title: Text(
               "Toggle Store Status",
               style: TextStyle(
                 fontSize: 18.0,
                 color:
-                Get.isDarkMode ? AppColors.spaceCadet : AppColors.spaceBlue,
+                Get.isDarkMode ? AppColors.primaryColorDark : AppColors.secondaryColorDark,
               ),
             ),
             onTap: () => Get.offAndToNamed('/toggle_status'),
@@ -95,14 +96,14 @@ class SideDrawer extends StatelessWidget {
             leading: Icon(
               Icons.add_comment_sharp,
               color:
-              Get.isDarkMode ? AppColors.spaceCadet : AppColors.spaceBlue,
+              Get.isDarkMode ? AppColors.primaryColorDark : AppColors.secondaryColorDark,
             ),
             title: Text(
               "Add Reviews",
               style: TextStyle(
                 fontSize: 18.0,
                 color:
-                Get.isDarkMode ? AppColors.spaceCadet : AppColors.spaceBlue,
+                Get.isDarkMode ? AppColors.primaryColorDark : AppColors.secondaryColorDark,
               ),
             ),
             onTap: () => Get.offAndToNamed('/add_reviews'),
